@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <title>WebSocket Chat Demo</title>
+  <meta charset="utf-8">
+  <link href="/style.css" rel="stylesheet">
+  <script type="text/javascript" src="/chatclient.js"></script>
+</head>
+<body>
+    <div class="container">
+        <p>Web 소켓 채팅 테스트</p>
+        <p>사용자 이름 입력: <input id="name" type="text" maxlength="12" placeholder="Your name">
+        <input type="button" name="login" value="Log in" onclick="connect()"></p>
+        <table border="0" width="100%">
+        <tr height="100%">
+        <td width="120px" align="top" border="1" height="100%">
+        <div id="userlistbox" style="border: 1px solid black; width:100%; height:100%;"></div>
+        </td>
+        <td>
+        <iframe width="100%" height="400px" id="chatbox"></iframe>
+        <tr>
+        <td>&nbsp;</td>
+        <td>
+        <p>
+        Chat: <input id="text" type="text" name="text" size="80" maxlength="256" placeholder="Chat with us!" autocomplete="off"onkeyup="handleKey(event)" disabled>
+        <input type="button" id="send" name="send" value="Send" onclick="send()" disabled></p></td>
+        </td>
+        </tr>
+        </table>
+    </div>
+</body>
+</html>
